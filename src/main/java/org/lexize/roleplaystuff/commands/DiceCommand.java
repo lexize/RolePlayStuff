@@ -12,10 +12,10 @@ public class DiceCommand extends PrintCommand {
 
     @Override
     protected BaseComponent[] getComponent(Player sourcePlayer, String[] arguments) {
-        if (arguments.length == 0) return null;
-        int sides_count;
-        try {
-            sides_count  = Integer.parseInt(arguments[0]);
+        int sides_count = 6;
+        if (arguments.length > 0) try {
+            // There is a lot of dices, max I've found is 256, and min is 1, but it is a bit pointless, so min value is 2
+            sides_count = Math.min(Math.max(2, Integer.parseInt(arguments[0])), 256);
         }
         catch (NumberFormatException e) {
             return null;

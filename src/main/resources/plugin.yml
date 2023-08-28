@@ -9,4 +9,4 @@ commands:
   try:
     usage: <message_text>
   dice:
-    usage: <sides_count>
+    usage: <sides_count 2-256>
