@@ -1,0 +1,6 @@
+# https://webui.advntr.dev/
+me: "<gold><player_name><reset> <action>"
+do: "* <action> <gold><i>(<player_name>)"
+try_successful: "<gold><player_name><reset> <action> <green>[Удачно]"
+try_unsuccessful: "<gold><player_name><reset> <action> <red>[Неудачно]"
+dice: "<yellow>🎲 <green> Игроком <gold><player_name></gold> был брошен кубик D<sides_count>, выпало <gold><result>"

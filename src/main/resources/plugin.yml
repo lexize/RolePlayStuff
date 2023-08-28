@@ -1,0 +1,12 @@
+name: RolePlayStuff
+version: '${project.version}'
+main: org.lexize.roleplaystuff.RolePlayStuff
+commands:
+  me:
+    usage: <message_text>
+  do:
+    usage: <message_text>
+  try:
+    usage: <message_text>
+  dice:
+    usage: <sides_count>
