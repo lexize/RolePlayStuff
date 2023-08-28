@@ -31,6 +31,7 @@ public final class RolePlayStuff extends JavaPlugin {
     public void onEnable() {
         try {
             // Plugin startup logic
+            saveDefaultConfig();
             commandRange = getConfig().getInt("rng", 25);
             translation = new Translation(getDataFolder().toPath().resolve("translation.yml").toFile());
             getCommand("me").setExecutor(new MeCommand(this));

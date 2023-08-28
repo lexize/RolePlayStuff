@@ -21,7 +21,7 @@ public class DiceCommand extends PrintCommand {
             return null;
         }
         int result = RolePlayStuff.RANDOM_INSTANCE.nextInt(sides_count)+1;
-        return RolePlayStuff.Utils.fromMinimessage(parent.getTranslation().get("do"),
+        return RolePlayStuff.Utils.fromMinimessage(parent.getTranslation().get("dice"),
                 Placeholder.unparsed("player_name", sourcePlayer.getName()),
                 Placeholder.unparsed("result", Integer.toString(result)),
                 Placeholder.unparsed("sides_count", Integer.toString(sides_count))
