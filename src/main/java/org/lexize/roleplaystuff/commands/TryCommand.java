@@ -12,6 +12,8 @@ public final class TryCommand extends PrintCommand {
 
     @Override
     protected BaseComponent[] getComponent(Player sourcePlayer, String[] arguments) {
+        String action = String.join(" ", arguments);
+        if (action.isEmpty() || action.isBlank()) return null;
         return RolePlayStuff.Utils.fromMinimessage(parent.getTranslation().get(
                 RolePlayStuff.RANDOM_INSTANCE.nextBoolean() ? "try_successful": "try_unsuccessful"),
                 Placeholder.unparsed("player_name", sourcePlayer.getName()),
